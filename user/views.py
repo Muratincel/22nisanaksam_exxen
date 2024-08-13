@@ -124,7 +124,7 @@ def accountDelete(request):
             user = request.user
             user.delete()
             logout(request)
-            messages.success(request, "hesabiniz basariyla silindi")
+            messages.success(request, "hesabiniz basariyla silindi. TEBRIKLER !!")
         else:
             messages.error(request, "hesabi silmek icin giris yapmalisin")
             return redirect('login')
